@@ -1,166 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <title>webDeveloper | Trevor Bruner</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-  </script>
-  <style>
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      padding: 0;
-      width: 100%;
-      background-color: #006699;
-    }
-    ul{
-      list-style-type: none;
-    }
-    li{
-      float: right;
-    }
-    li a{
-      text-decoration: none;
-      display: block;
-      text-align: center;
-      font-family: sans-serif;
-      font-size: 14px;
-      color: #fff;
-      padding: 0px 16px 12px;
-    }
-    a:hover, a:active, a:focus{
-      color: #aaa;
-      text-decoration: none;
-    }
-    big {
-      font-size: 20px;
-      font-weight: bold;
-    }
-    h1 {
-      font-weight: bold;
-      font-family: sans-serif;
-      font-size: 45px;
-      margin-top: 40px;
-      margin-bottom: 40px;
-    }
-    h2 {
-      font-weight: bold;
-      font-family: sans-serif;
-      font-size: 29px;
-      margin: 40px;
-    }
-    p {
-      font-family: sans-serif;
-      font-size: 18px;
-      margin: 0 15px;
-    }
-    .profile-pic {
-      width: 300px;
-      border-radius: 10%;
-    }
-    .screenshot {
-      margin: 20px;
-      width: 450px;
-      border-radius: 5%;
-      border: 8px solid #000;
-    }
-    body {
-      padding-top: 70px;
-      align-content: center;
-      text-align: center;
-      background-color: #fff;
-      color: #000;
-    }
-    footer {
-      height: 38px;
-      bottom: 0;
-      left: 0;
-      padding: 0;
-      width: 100%;
-      background-color: #006699;
-    }
-    .email {
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-    }
-    hr {
-      width: 90%;
-      margin-top: 38px;
-      padding-top: 8px;
-      border-width: 3px;
-      border-color: #888;
-    }
-    .fa {
-    padding: 10px;
-    font-size: 15px;
-    width: 30px;
-    text-align: center;
-    text-decoration: none;
-  }
-  .bottom {
-    margin-bottom: 42px;
-  }
-}
-  </style>
-</head>
-  <header class="header">
-    <nav>
-      <ul>
-        <li style="float:left"><a href="#home"><big>Trevor Bruner</big></a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#portfolio">Projects</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
-    </nav>
-  </header>
-  <body id="home">
-    <h1>DEVELOPER AND DESIGNER</h1>
-    <img class="profile-pic" src="kzooMarathon2017.jpg" alt="photo of Trevor">
-    <hr id="about">
-    <h2>ABOUT</h2>
-    <p>
-      Hello. I am a developer and designer currently looking for freelance,
-      internship, or full time opportunities. You can check out some of my
-      personal projects by scrolling down or clicking on projects above. When
-      I'm not working I enjoy watching sports, running, and playing video games.
-      If you would like to contact me you can use the link at the bottom of
-      this page.
-    </p>
-    <hr id="portfolio">
-    <h2>WORK</h2>
-    <a href="https://codepen.io/TrevTrain/project/full/XRwVrB/">
-      <img class="screenshot" src="steveJobs.png" alt="Steve Jobs tribute page">
-    </a>
-    <a href="#">
-      <img class="screenshot" src="placeholder.jpg" alt="placeholder">
-    </a>
-    <a href="#">
-      <img class="screenshot" src="placeholder.jpg" alt="placeholder">
-    </a>
-    <a href="#">
-      <img class="screenshot" src="placeholder.jpg" alt="placeholder">
-    </a>
-    <hr id="contact">
-    <h2>CONTACT ME</h2>
-    <p class="bottom">
-      Thanks for visiting my webpage! If you have any questions, are interested
-      in hiring me, or just want to chat you can send me an email at
-      <a href="mailto:trevorabruner@gmail.com" class="email">trevorabruner@gmail.com</a>
-      or connect with me through social media via the links below. I also
-      have a blog where I offer my thoghts on what's going on in the sports
-      world that you can visit via the Wordpress link below.
-    </p>
-  </body>
-<footer>
-  <ul>
-    <li><a target="_blank" href="https://www.facebook.com/trevor.bruner.1" class="fa fa-facebook"></a></li>
-    <li><a target="_blank" href="https://twitter.com/TrevorABruner" class="fa fa-twitter"></a></li>
-    <li><a target="_blank" href="https://www.linkedin.com/in/trevor-bruner-6679a072/" class="fa fa-linkedin"></a></li>
-    <li><a target="_blank" href="https://github.com/tbruner" class="fa fa-github"></a></li>
-    <li><a target="_blank" href="https://pointtwohundred.wordpress.com/" class="fa fa-wordpress"></a></li>
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
   </ul>
-</footer>
-</html>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
