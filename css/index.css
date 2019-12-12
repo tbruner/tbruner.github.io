@@ -7,6 +7,15 @@ html {
   font-family: sans-serif;
   scroll-behavior: smooth;
 }
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 66%;
+  }
+  #projects {
+    height: 225vh;
+  }
+}
 nav {
   display: flex;
   justify-content: flex-end;
@@ -29,13 +38,13 @@ figcaption {
   padding: 1rem;
 }
 .thumbnail {
-  width: 400px;
-  padding: 5px;
+  width: 25rem;
+  padding: .25rem;
 }
 .project-tile {
   background-color: #B3B570;
-  padding: 5px 5px 20px 5px;
-  margin: 5px;
+  padding: .25rem .25rem 1.25rem .25rem;
+  margin: .25rem;
 }
 #abouttab:hover {
   background: #479733;
@@ -57,8 +66,9 @@ h1 {
   font-family: 'Roboto', sans-serif;
   font-size: 3.6rem;
   color: #000;
+  text-align: center;
 }
-#about {
+p {
   text-align: center;
 }
 #welcome-section {
