@@ -15,6 +15,12 @@ html {
   #projects {
     height: 225vh;
   }
+  .mobile {
+    font-size: 1.3em;
+  }
+  #projectshead {
+    padding-bottom: 1em;
+  }
 }
 nav {
   display: flex;
