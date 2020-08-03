@@ -4,18 +4,8 @@
 }
 html {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: Roboto, sans-serif;
   scroll-behavior: smooth;
-}
-/* 980px / 16px = 61.25em */
-@media screen and (max-width: 61.25em), screen and (max-device-width: 61.25em){
-
-  #projects {
-    height: 250vh;
-  }
-  #projectshead {
-    padding-bottom: 1em;
-  }
 }
 nav {
   display: flex;
@@ -25,10 +15,7 @@ nav {
   left: 0;
   background-color: #404448;
   width: 100%;
-}
-figcaption {
-  text-align: center;
-  color: #FFF;
+  z-index: 1;
 }
 .nav-list {
   display: flex;
@@ -42,17 +29,37 @@ figcaption {
 .nav-list a:hover {
   color: #CCC;
 }
-.thumbnail {
-  width: 25rem;
-  padding: .25rem;
-}
 .project-tile {
-  background-color: #404448;
-  padding: .25rem .25rem 1.25rem .25rem;
-  margin: .25rem;
+  position: relative;
+  margin: 1rem;
 }
-.project-tile:hover {
-  background-color: #777
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 1em;
+  transition: .5s ease;
+  background-color: #00000088;
+  opacity: 0;
+}
+.project-tile:hover .overlay {
+  opacity: 1;
+}
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: inline-block;
+  color: white;
+}
+.thumbnail {
+  border-radius: 1em;
 }
 ul {
   list-style: none;
@@ -72,6 +79,9 @@ p {
 }
 #welcome-section {
   background-color: #FFF;
+}
+#projectshead {
+  padding-bottom: 1em;
 }
 #projects {
   background-color: #0073B0;
@@ -110,4 +120,19 @@ p {
 }
 #email a:hover {
   color: #0073B0;
+}
+/* 980px / 16px = 61.25em */
+@media screen and (max-width: 61.25em){
+  #thumbnails {
+    flex-direction: column;
+  }
+  .thumbnail {
+    width: 250px;
+  }
+  .project-tile {
+    margin: .4em;
+  }
+  #projectshead {
+    padding-bottom: .4em;
+  }
 }
