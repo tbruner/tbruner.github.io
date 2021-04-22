@@ -60,6 +60,7 @@ nav {
 }
 .thumbnail {
   border-radius: 1em;
+  width: 600px;
 }
 ul {
   list-style: none;
