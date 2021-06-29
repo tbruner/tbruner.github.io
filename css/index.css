@@ -1,114 +1,43 @@
-* {
-  margin: 0;
-  padding: 0;
-}
 html {
-  box-sizing: border-box;
   font-family: Roboto, sans-serif;
   scroll-behavior: smooth;
 }
-nav {
-  display: flex;
-  justify-content: flex-end;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #404448;
-  width: 100%;
-  z-index: 1;
+a {
+  text-decoration: none;
 }
-.nav-list {
-  display: flex;
-  margin-right: 1rem;
+.navbar {
+  transition: top 0.5s ease;
 }
-.nav-list a {
-  display: block;
-  padding: 1rem;
-  color: #FFF;
+.navbar-dark .navbar-nav .nav-item .nav-link:focus,
+.navbar-dark .navbar-nav .nav-item .nav-link:hover {
+  color: #7510F7;
 }
-.nav-list a:hover {
-  color: #CCC;
+.navbar-hide {
+  top: -56px;
 }
-.project-tile {
-  position: relative;
-  margin: 1rem;
+.project-tile:hover {
+  opacity: .8;
 }
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  border-radius: 1em;
-  transition: .5s ease;
-  background-color: #00000088;
-  opacity: 0;
-}
-.project-tile:hover .overlay {
-  opacity: 1;
-}
-.text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  display: inline-block;
-  color: white;
+.description {
+  color: black;
 }
 .thumbnail {
   border-radius: 1em;
-  width: 600px;
-}
-ul {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-  color: #000;
-}
-h1 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 2rem;
-  color: #000;
-  text-align: center;
-}
-p {
-  text-align: center;
 }
 #welcome-section {
-  background-color: #FFF;
-}
-#projectshead {
-  padding-bottom: 1em;
-}
-#projects {
-  background-color: #0073B0;
+  height: 100vh;
+  background: linear-gradient(0deg, white 5%, #7510F7);
 }
 #contact {
-  background-color: #FFF;
-}
-#thumbnails {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(white 5%, #7510F7);
 }
 .bg {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100vh;
 }
 .fa {
-  padding: 2rem;
   font-size: 2rem;
-  color: #000;
+  color: white;
 }
 .fa-github:hover {
   color: #777;
@@ -119,21 +48,9 @@ p {
 .fa-twitter:hover {
   color: #1A91DA;
 }
-#email a:hover {
-  color: #0073B0;
+.fa-envelope-o:hover {
+  color: #ea4335;
 }
-/* 980px / 16px = 61.25em */
-@media screen and (max-width: 61.25em){
-  #thumbnails {
-    flex-direction: column;
-  }
-  .thumbnail {
-    width: 280px;
-  }
-  .project-tile {
-    margin: .4em;
-  }
-  #projectshead {
-    padding-bottom: .4em;
-  }
+.source-link {
+  color: black;
 }

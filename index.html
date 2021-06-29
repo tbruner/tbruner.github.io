@@ -1,64 +1,134 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Trevor Bruner | Front-End Web Developer</title>
+  <title>Trevor Bruner</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <!-- Add roboto font and icon library -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:500&display=swap" rel="stylesheet">
+  <!-- For Social Media icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="css/index.css" type="text/css" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <nav id="navbar">
-    <ul class="nav-list">
-      <li>
-        <a href="#welcome-section" id="abouttab">About</a>
-      </li>
-      <li>
-        <a href="#projects" id="projectstab">Projects</a>
-      </li>
-      <li>
-        <a href="#contact" id="contacttab">Contact</a>
-      </li>
-    </ul>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <!-- Toggler/Collapsible button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- navbar links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#welcome-section">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#writing">Writing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
-  <div id="welcome-section" class="bg">
-    <h1 id="about">Hello,<br>I'm Trevor Bruner</h1>
-    <p class="mobile">I am a front end web developer based in Michigan, USA. I am proficient in HTML,
-      CSS, JavaScript.
-    </p>
-  </div>
-  <div id="projects" class="bg">
-    <h1 id="projectshead">Projects</h1>
-    <div id="thumbnails">
-      <div class="project-tile"><a href="https://tbruner.github.io/quiz-app">
-        <img src="images/quiz-app.png" class="thumbnail" alt="tribute page thumbnail">
-        <div class="overlay">
-          <div class="text">Quiz App<br><br>HTML CSS JavaScript</div>
+  
+  <div class="container-fluid">
+    <div id="welcome-section" class="bg row text-center">
+      <div class="align-middle bg-dark rounded text-white col-11 col-md-6 mx-auto py-3">
+        <h1 class="m-3">Hi, I'm Trevor Bruner</h1>
+        <p id="about" class="text-secondary">
+          I am a front end developer located in Michigan.
+          I build websites that are easy to navigate, have a clear purpose, and look great on any device.
+          Check out my work below.
+        </p>
+      </div>
+    </div>
+
+    <div id="projects" class="bg row text-center my-5">
+      <div class="align-middle">
+        <h1 class="my-5">Projects</h1>
+        <div class="container-fluid justify-content-center mt-1">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 col-12 my-2">
+              <a href="https://tbruner.github.io/quiz-app" target="_blank" class="project-tile">
+                <img src="images/quiz-app.png" class="img-fluid rounded thumbnail" alt="tribute page thumbnail">
+                <div class="description my-2">Quiz App HTML CSS JavaScript</div>
+              </a>
+              <a href="https://github.com/tbruner/quiz-app" target="_blank" class="fa fa-github m-0 p-1 source-link"></a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 my-2">
+              <a href="https://tbruner.github.io/Simon-Game" target="_blank" class="project-tile">
+                <img src="images/simonGame.png" class="img-fluid rounded thumbnail" alt="simon game thumbnail">
+                <div class="description my-2">Simon Game HTML CSS JavaScript</div>
+              </a>
+              <a href="https://github.com/tbruner/Simon-Game" target="_blank" class="fa fa-github m-0 p-1 source-link"></a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 my-2">
+              <a href="https://tbruner.github.io/markdown-previewer" target="_blank" class="project-tile">
+                <img src="images/markdown-thumbnail.png" class="img-fluid rounded thumbnail" alt="markdown-previewer thumbnail">
+                <div class="description my-2">Markdown Previewer React CSS</div>
+              </a>
+              <a href="https://github.com/tbruner/markdown-previewer" target="_blank" class="fa fa-github m-0 p-1 source-link"></a>
+            </div>
+          </div>
         </div>
-      </a></div>
-      <div class="project-tile"><a href="https://tbruner.github.io/Simon-Game">
-        <img src="images/simonGame.png" class="thumbnail" alt="simon game thumbnail">
-        <div class="overlay">
-          <div class="text">Simon Game<br><br>HTML CSS JavaScript</div>
+      </div>
+    </div>
+
+    <div id="writing" class="bg row text-center my-5">
+      <div class="align-middle">
+        <h1 class="my-5">Writing</h1>
+        <div class="container-fluid justify-content-center mt-1">
+          <div class="row justify-content-center">
+            <p>comming soon!</p>
+          </div>
         </div>
-      </a></div>
-      <div class="project-tile"><a href="https://tbruner.github.io/surveyForm">
-        <img src="images/surveyForm.png" class="thumbnail" alt="survey form thumbnail">
-        <div class="overlay">
-          <div class="text">Survey Form<br><br>HTML CSS JavaScript</div>
-        </div>
-      </a></div>
+      </div>
+    </div>
+
+    <div id="contact" class="bg row text-center">
+      <div class="align-middle bg-dark rounded text-white col-11 col-md-6 mx-auto pt-3">
+        <h1>Lets Connect!</h1>
+        <p class="text-secondary pt-2">Interested in working together?<br>Feel free to reach out to me on any of the platforms below</p>
+        <nav class="nav justify-content-center">
+          <a href="https://github.com/tbruner" target="_blank" class="nav-link fa fa-github m-3 p-3"></a>
+          <a href="https://twitter.com/TrevorABruner" target="_blank" class="nav-link fa fa-twitter m-3 p-3"></a>
+          <a href="https://www.linkedin.com/in/trevor-bruner-6679a072/" target="_blank" class="nav-link fa fa-linkedin m-3 p-3"></a>
+          <a href="mailto:trevorabruner@gmail.com" class="fa fa-envelope-o nav-link m-3 p-3"></a>
+        </nav>
+      </div>
     </div>
   </div>
-  <div id="contact" class="bg">
-    <h1>Contact Information</h1>
-    <div id="contact-links">
-      <a href="https://github.com/tbruner" id="profile-link" target="_blank" class="fa fa-github"></a>
-      <a href="https://twitter.com/TrevorABruner" target="_blank" class="fa fa-twitter"></a>
-      <a href="https://www.linkedin.com/in/trevor-bruner-6679a072/" target="_blank" class="fa fa-linkedin"></a>
-    </div>
-    <span id="email"><a href="mailto:trevorabruner@gmail.com">trevorabruner@gmail.com</a></span>
-  </div>
+  
+  <!-- jQuery first, then code to hide navbar on scroll, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  
+  <script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        $('.navbar').removeClass("navbar-hide");
+      } else {
+        $('.navbar').addClass("navbar-hide");
+      }
+      prevScrollpos = currentScrollPos;
+    }
+
+    $(".navbar-collapse a").click(function () {
+      $(".navbar-collapse").collapse("hide");
+    });
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
