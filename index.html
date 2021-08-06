@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Trevor Bruner</title>
   <link rel="icon" href="images/favi2.png" type="image/x-icon">
   <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <!-- Add roboto font and icon library -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:500&display=swap" rel="stylesheet">
   <!-- For Social Media icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="css/index.css" type="text/css" rel="stylesheet">
+  <meta charset="utf-8" />
   <meta name="description" content="Trevor Bruner front end web developer portfolio">
   <meta name="keywords" content="web developer, tech, React, programming, javascript, html, css">
   <meta name="author" content="Trevor Bruner">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="navbar">
     <div class="container-fluid">
-      <img src="images/favi.png" class="navbar-brand" />
+      <img src="images/favi.png" class="navbar-brand" alt="logo" />
       <!-- Toggler/Collapsible button -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+      <button aria-label="Toggle navigation" aria-controls="navbarSupportedContent" aria-expanded="false" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -46,9 +47,9 @@
   
   <div class="container-fluid">
     <div id="welcome-section" class="bg row text-center">
-      <div class="align-middle bg-dark rounded text-white col-11 col-md-6 mx-auto py-3">
+      <div class="align-middle bg-dark rounded text-light col-11 col-md-6 mx-auto py-3">
         <h1 class="m-3">Hi, I'm Trevor Bruner</h1>
-        <p id="about" class="text-secondary">
+        <p id="about">
           I am a front end developer located in Michigan.
           I build websites that are easy to navigate, have a clear purpose, and look great on any device.
           Check out my work below.
@@ -63,7 +64,7 @@
           <div class="row justify-content-center">
             <div class="col-lg-4 col-md-6 col-12 my-2">
               <a href="https://tbruner.github.io/quiz-app" target="_blank" class="project-tile">
-                <img src="images/quiz-app.png" class="img-fluid rounded thumbnail" alt="tribute page thumbnail">
+                <img src="images/quiz-app.png" class="img-fluid rounded thumbnail" alt="quiz app thumbnail">
                 <div class="description my-2">Quiz App HTML CSS JavaScript</div>
               </a>
               <a href="https://github.com/tbruner/quiz-app" target="_blank" class="fa fa-github m-0 p-1 source-link"></a>
@@ -101,30 +102,30 @@
     </div>
 
     <div id="contact" class="bg row text-center">
-      <div class="align-middle bg-dark rounded text-white col-11 col-md-6 mx-auto pt-3">
+      <div class="align-middle bg-dark rounded text-light col-11 col-md-6 mx-auto pt-3">
         <h1>Lets Connect!</h1>
-        <p class="text-secondary pt-2">Interested in working together?<br>Feel free to reach out to me on any of the platforms below</p>
+        <p class="pt-2">Interested in working together?<br>Feel free to reach out to me on any of the platforms below</p>
         <nav class="nav justify-content-center">
-          <a href="https://github.com/tbruner" target="_blank" class="nav-link fa fa-github m-3 p-3"></a>
-          <a href="https://twitter.com/TrevorABruner" target="_blank" class="nav-link fa fa-twitter m-3 p-3"></a>
-          <a href="https://www.linkedin.com/in/trevor-bruner-6679a072/" target="_blank" class="nav-link fa fa-linkedin m-3 p-3"></a>
-          <a href="mailto:trevorabruner@gmail.com" class="fa fa-envelope-o nav-link m-3 p-3"></a>
+          <a href="https://github.com/tbruner" target="_blank" class="nav-link fa fa-github mx-1 my-3" alt="github link" rel="noopener"></a>
+          <a href="https://twitter.com/TrevorABruner" target="_blank" class="nav-link fa fa-twitter mx-1 my-3" alt="twitter link" rel="noopener"></a>
+          <a href="https://www.linkedin.com/in/trevor-bruner-6679a072/" target="_blank" class="nav-link fa fa-linkedin mx-1 my-3" alt="linkedin link" rel="noopener"></a>
+          <a href="mailto:trevorabruner@gmail.com" class="fa fa-envelope-o nav-link mx-1 my-3" alt="email link"></a>
         </nav>
       </div>
     </div>
   </div>
   
-  <!-- jQuery first, then code to hide navbar on scroll, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  
+  <!-- jQuery first, then code to hide navbar on scroll, then Popper.js and Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
   <script>
-    var prevScrollpos = window.pageYOffset;
+    let prevScrollpos = window.pageYOffset;
     window.onscroll = function() {
-      var currentScrollPos = window.pageYOffset;
+      let currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
-        $('.navbar').removeClass("navbar-hide");
+        document.getElementById('navbar').style.top = "0";
       } else {
-        $('.navbar').addClass("navbar-hide");
+        document.getElementById('navbar').style.top = "-50px";
       }
       prevScrollpos = currentScrollPos;
     }
@@ -134,7 +135,6 @@
     });
   </script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -12,9 +12,6 @@ a {
 .navbar-dark .navbar-nav .nav-item .nav-link:hover {
   color: #7510F7;
 }
-.navbar-hide {
-  top: -56px;
-}
 .project-tile:hover {
   opacity: .8;
 }
