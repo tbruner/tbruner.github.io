@@ -5,6 +5,9 @@ html {
 a {
   text-decoration: none;
 }
+#logo {
+  height: 40px;
+}
 .navbar {
   transition: top 0.5s ease;
 }
