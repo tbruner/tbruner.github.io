@@ -1,3 +1,5 @@
-# tbruner.github.io
+# Portfolio Page
+
 This is my personal portfolio website.
-Feel free to check it out!
+
+Check it out here: [Portfolio](https://tbruner.github.io/)
