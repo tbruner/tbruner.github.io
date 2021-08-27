@@ -17,8 +17,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="navbar">
-    <div class="container-fluid">
+  <header class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <nav class="container-fluid margins">
       <a href="#welcome-section">
         <img src="images/favi.png" class="navbar-brand" id="logo" alt="logo" />
       </a>
@@ -41,43 +41,42 @@
           </li>
         </ul>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
   
   <div class="container-fluid">
     <div id="welcome-section" class="bg row text-center">
-      <div class="align-middle bg-dark rounded text-light col-11 col-md-6 mx-auto p-5">
+      <div id="content" class="align-middle rounded col-11 col-md-6 mx-auto p-5">
         <h1>Hi, I'm Trevor.</h1>
-        <p id="about">
-          I am a front end developer, I build beautiful websites that are easy to navigate, and look great on any device.<br>
-          Check out some of my work below.
+        <p id="about" class="h3">
+          I'm a full stack developer.
         </p>
       </div>
     </div>
 
-    <div id="projects" class="bg row text-center my-5">
+    <div id="projects" class="bg row text-center my-5 margins">
       <div class="align-middle">
         <h1 class="my-5">Projects</h1>
         <div class="container-fluid justify-content-center mt-1">
           <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6 col-12 my-2">
-              <a href="https://tbruner.github.io/quiz-app" target="_blank" class="project-tile">
-                <img src="images/persona-quiz-app.png" class="img-fluid rounded thumbnail" alt="quiz app thumbnail" rel="noopener">
+            <div class="col-md-6 col-12 my-2 project-tile">
+              <a href="https://tbruner.github.io/quiz-app" target="_blank" rel="noopener">
+                <img src="images/persona-quiz-app.png" class="img-fluid rounded thumbnail" alt="quiz app thumbnail">
                 <div class="description my-2">Persona Quiz App HTML CSS JavaScript</div>
               </a>
               <a href="https://github.com/tbruner/quiz-app" target="_blank" class="fa fa-github m-0 p-1 source-link" rel="noopener"></a>
             </div>
 
-            <div class="col-lg-4 col-md-6 col-12 my-2">
-              <a href="https://tbruner.github.io/Simon-Game" target="_blank" class="project-tile">
-                <img src="images/simonGame.png" class="img-fluid rounded thumbnail" alt="simon game thumbnail" rel="noopener">
+            <div class="col-md-6 col-12 my-2 project-tile">
+              <a href="https://tbruner.github.io/simon-game" target="_blank" rel="noopener">
+                <img src="images/simonGame.png" class="img-fluid rounded thumbnail" alt="simon game thumbnail">
                 <div class="description my-2">Simon Game HTML CSS JavaScript</div>
               </a>
               <a href="https://github.com/tbruner/Simon-Game" target="_blank" class="fa fa-github m-0 p-1 source-link" rel="noopener"></a>
             </div>
 
-            <div class="col-lg-4 col-md-6 col-12 my-2">
-              <a href="https://tbruner.github.io/markdown-previewer" target="_blank" class="project-tile" rel="noopener">
+            <div class="col-md-6 col-12 my-2 project-tile">
+              <a href="https://tbruner.github.io/markdown-previewer" target="_blank" rel="noopener">
                 <img src="images/markdown-thumbnail.png" class="img-fluid rounded thumbnail" alt="markdown-previewer thumbnail">
                 <div class="description my-2">Markdown Previewer React CSS</div>
               </a>
@@ -89,7 +88,7 @@
     </div>
 
     <div id="writing" class="bg row text-center my-5">
-      <div class="align-middle">
+      <div id="content" class="align-middle">
         <h1 class="my-5">Writing</h1>
         <div class="container-fluid justify-content-center mt-1">
           <div class="row justify-content-center">
@@ -100,9 +99,8 @@
     </div>
 
     <div id="contact" class="bg row text-center">
-      <div class="align-middle bg-dark rounded text-light col-11 col-md-6 mx-auto p-5">
+      <div class="align-middle rounded col-11 col-md-6 mx-auto p-5">
         <h1>Lets Connect!</h1>
-        <p class="pt-2">Interested in working together?<br>Feel free to reach out to me on any of the platforms below</p>
         <nav class="nav justify-content-center">
           <a href="https://github.com/tbruner" target="_blank" class="nav-link fa fa-github mx-1 my-3" alt="github link" rel="noopener"></a>
           <a href="https://www.linkedin.com/in/trevorabruner/" target="_blank" class="nav-link fa fa-linkedin mx-1 my-3" alt="linkedin link" rel="noopener"></a>
