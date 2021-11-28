@@ -5,7 +5,6 @@
   --primary: hsl(var(--brand-hue), var(--brand-saturation), var(--brand-light));
   --background: hsl(var(--brand-hue), 10%, 15%);
   --text: hsl(var(--brand-hue), 15%, 85%);
-  color:hsl(290, 100%, 36%)
 }
 html {
   font-family: Roboto, sans-serif;
