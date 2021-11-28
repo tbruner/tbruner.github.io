@@ -1,13 +1,18 @@
 :root {
-  --primary: hsl(266, 94%, 52%);
-  --background: hsl(210, 11%, 15%);
+  --brand-hue: 290;
+  --brand-saturation: 100%;
+  --brand-light: 36%;
+  --primary: hsl(var(--brand-hue), var(--brand-saturation), var(--brand-light));
+  --background: hsl(var(--brand-hue), 10%, 15%);
+  --text: hsl(var(--brand-hue), 15%, 85%);
+  color:hsl(290, 100%, 36%)
 }
 html {
   font-family: Roboto, sans-serif;
   scroll-behavior: smooth;
 }
 body {
-  color: white;
+  color: var(--text);
   background-color: var(--background);
 }
 a {
@@ -19,42 +24,45 @@ a {
 .navbar {
   transition: top 0.5s ease;
 }
+.navbar-dark .navbar-nav .nav-item .nav-link {
+  color: var(--text);
+}
 .navbar-dark .navbar-nav .nav-item .nav-link:focus,
 .navbar-dark .navbar-nav .nav-item .nav-link:hover {
-  color: var(--primary);
+  color: hsl(var(--brand-hue), 10%, 50%);
 }
 .project-tile:hover {
   opacity: .8;
 }
 #welcome-section {
   height: 100vh;
-  background-image: linear-gradient(45deg, var(--primary), hsl(314, 100%, 43%));
+  background-image: linear-gradient(45deg, var(--primary), hsl(320, 100%, 36%));
   transform: skewY(-10deg);
+}
+#content {
+  transform: skewY(10deg);
+  background-color: hsl(var(--brand-hue) var(--brand-saturation) 15% / 60%);
 }
 #projects {
   padding: 20vh 0px;
 }
 #writing {
   height: 100vh;
-  background-image: linear-gradient(45deg, var(--primary), hsl(314, 100%, 43%));
+  background-image: linear-gradient(45deg, var(--primary), hsl(320, 100%, 36%));
   transform: skewY(-10deg);
-  color: white;
 }
 #contact {
   height: 100vh;
-}
-#content {
-  transform: skewY(10deg);
 }
 .bg {
   align-items: center;
 }
 .fa {
   font-size: 2rem;
-  color: white;
+  color: currentColor;
 }
 .fa-github:hover {
-  color: hsl(0, 0%, 47%);
+  color: hsl(0, 0%, 45%);
 }
 .fa-linkedin:hover {
   color: hsl(201, 100%, 35%);
@@ -63,10 +71,10 @@ a {
   color: hsl(5, 81%, 56%);
 }
 .source-link {
-  color: white;
+  color: var(--text);
 }
 .description {
-  color: white;
+  color: var(--text);
 }
 .margins {
   width: 1320px;
