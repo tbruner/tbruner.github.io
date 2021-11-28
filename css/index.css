@@ -1,10 +1,14 @@
+:root {
+  --primary: hsl(266, 94%, 52%);
+  --background: hsl(210, 11%, 15%);
+}
 html {
   font-family: Roboto, sans-serif;
   scroll-behavior: smooth;
 }
 body {
   color: white;
-  background-color: #212529;
+  background-color: var(--background);
 }
 a {
   text-decoration: none;
@@ -17,14 +21,14 @@ a {
 }
 .navbar-dark .navbar-nav .nav-item .nav-link:focus,
 .navbar-dark .navbar-nav .nav-item .nav-link:hover {
-  color: #7510F7;
+  color: var(--primary);
 }
 .project-tile:hover {
   opacity: .8;
 }
 #welcome-section {
   height: 100vh;
-  background-image: linear-gradient(45deg, #7510F7, #d0a);
+  background-image: linear-gradient(45deg, var(--primary), hsl(314, 100%, 43%));
   transform: skewY(-10deg);
 }
 #projects {
@@ -32,7 +36,7 @@ a {
 }
 #writing {
   height: 100vh;
-  background-image: linear-gradient(45deg, #7510F7, #d0a);
+  background-image: linear-gradient(45deg, var(--primary), hsl(314, 100%, 43%));
   transform: skewY(-10deg);
   color: white;
 }
@@ -50,13 +54,13 @@ a {
   color: white;
 }
 .fa-github:hover {
-  color: #777;
+  color: hsl(0, 0%, 47%);
 }
 .fa-linkedin:hover {
-  color: #0073B0;
+  color: hsl(201, 100%, 35%);
 }
 .fa-envelope-o:hover {
-  color: #ea4335;
+  color: hsl(5, 81%, 56%);
 }
 .source-link {
   color: white;
