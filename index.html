@@ -97,10 +97,11 @@
 
     <div id="writing" class="bg row text-center my-5">
       <div id="content" class="align-middle rounded col-11 col-md-6 mx-auto p-5">
-        <h1 class="my-5">Writing</h1>
+        <h1 class="mb-5">Writing</h1>
         <div class="container-fluid justify-content-center mt-1">
           <div class="row justify-content-center">
-            <p>comming soon!</p>
+            <div class="col-md-6 col-12 my-2" id="post-tile">
+            </div>
           </div>
         </div>
       </div>
@@ -125,6 +126,27 @@
     $(".navbar-collapse a").click(function () {
       $(".navbar-collapse").collapse("hide");
     });
+
+    // Get posts from DEV.to
+    async function getapi(url) {
+    const response = await fetch(url);
+    
+    // Storing data in form of JSON
+    var data = await response.json();
+    console.log(data);
+    display(data);
+    }
+  
+    function display(articles) {
+      let tile = 
+      `<a href=${articles[0].canonical_url} target="_blank" rel="noopener">
+        <img src=${articles[0].cover_image} class="img-fluid rounded thumbnail" alt="article thumbnail">
+        <div class="description my-2">${articles[0].title}</div>
+      </a>`;
+      document.getElementById('post-tile').innerHTML = tile;
+    }
+    
+    getapi('https://dev.to/api/articles?username=tbruner');
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
