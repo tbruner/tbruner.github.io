@@ -67,8 +67,8 @@ a {
 .fa-github:hover {
   color: hsl(0, 0%, 45%);
 }
-.fa-linkedin:hover {
-  color: hsl(201, 100%, 35%);
+.fa-twitter:hover {
+  color: hsl(204,79,47);
 }
 .fa-envelope-o:hover {
   color: hsl(5, 81%, 56%);
