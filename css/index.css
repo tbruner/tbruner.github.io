@@ -39,20 +39,21 @@ a {
 #welcome-section {
   height: 100vh;
   background-image: linear-gradient(45deg, var(--primary), hsl(320, 100%, 36%));
-  transform: skewY(-10deg);
 }
 #content {
   margin-top: 25vh;
   margin-bottom: 25vh;
-  transform: skewY(10deg);
   background-color: hsl(var(--brand-hue) var(--brand-saturation) 15% / 60%);
+}
+#writing-content {
+  margin-top: 25vh;
+  margin-bottom: 25vh;
 }
 #projects {
   padding: 20vh 0px;
 }
 #writing {
-  background-image: linear-gradient(45deg, var(--primary), hsl(320, 100%, 36%));
-  transform: skewY(-10deg);
+  background-color: hsl(var(--brand-hue), 10%, 30%);
 }
 #contact {
   height: 100vh;
