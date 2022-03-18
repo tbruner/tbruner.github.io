@@ -5,88 +5,107 @@
   --primary: hsl(var(--brand-hue), var(--brand-saturation), var(--brand-light));
   --background: hsl(var(--brand-hue), 10%, 15%);
   --text: hsl(var(--brand-hue), 15%, 85%);
-  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   font-family: var(--font);
   color: var(--text);
   background-color: var(--background);
 }
+
 a {
   text-decoration: none;
 }
+
 #logo {
   height: 40px;
 }
+
 .navbar {
+  padding: 1vh 16vw;
   transition: top 0.5s ease;
   background-color: var(--background);
 }
-.navbar-dark .navbar-nav .nav-item .nav-link {
+
+section {
+  padding: 20vh 16vw;
+}
+
+.navbar-dark a {
   font-family: var(--font);
   color: var(--text);
 }
-.navbar-dark .navbar-nav .nav-item .nav-link:focus,
-.navbar-dark .navbar-nav .nav-item .nav-link:hover {
+
+.navbar-dark a:focus,
+.navbar-dark a:hover {
   color: hsl(var(--brand-hue), 10%, 50%);
 }
+
 .tile:hover {
   opacity: .64;
 }
+
 #welcome-section {
   height: 100vh;
   background-image: linear-gradient(45deg, var(--primary), hsl(320, 100%, 36%));
 }
+
 #content {
   margin-top: 25vh;
   margin-bottom: 25vh;
   background-color: hsl(var(--brand-hue) var(--brand-saturation) 15% / 60%);
 }
+
 #writing-content {
   margin-top: 25vh;
   margin-bottom: 25vh;
 }
-#projects {
-  padding: 20vh 0px;
-}
+
 #writing {
   background-color: hsl(var(--brand-hue), 10%, 30%);
 }
+
 #contact {
   height: 100vh;
 }
+
 .bg {
   align-items: center;
 }
+
 .fa {
   font-size: 2rem;
   color: currentColor;
 }
+
 .fa-github:hover {
   color: hsl(0, 0%, 45%);
 }
+
 .fa-twitter:hover {
   color: hsl(204,79,47);
 }
+
 .fa-envelope-o:hover {
   color: hsl(5, 81%, 56%);
 }
+
 .source-link {
   color: var(--text);
 }
+
 .description {
   color: var(--text);
   font-weight: bold;
 }
-.margins {
-  width: 1320px;
-  margin: auto;
-}
+
 @media screen and (max-width: 1320px) {
-  .margins {
-    width: auto;
+  section {
+    padding: 12vh 0;
   }
 }
