@@ -134,6 +134,19 @@ h1 {
   font-weight: bold;
 }
 
+.icon svg {
+  color: var(--text);
+  height: 36px;
+}
+
+.icon svg:hover {
+  color: hsl(var(--brand-hue), 10%, 50%);
+}
+
+.card .icon svg {
+  height: 24px;
+}
+
 @media screen and (max-width: 1320px) {
   section {
     padding: 12vh 4vw;
