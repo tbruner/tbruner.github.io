@@ -6,10 +6,6 @@
   <link rel="icon" href="images/favi2.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-  <!-- For Social Media icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="css/index.css" type="text/css" rel="stylesheet">
   <meta charset="utf-8" />
   <meta name="description" content="Trevor Bruner front end web developer portfolio">
@@ -19,141 +15,112 @@
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-      <a href="#welcome-section">
-        <img src="images/favi.svg" class="navbar-brand" id="logo" alt="logo" />
+    <nav class="navbar-dark">
+      <a href="#hero">
+        <img src="images/favi.svg" class="navbar-brand logo" alt="logo" />
       </a>
-      <!-- Toggler/Collapsible button -->
-      <button aria-label="Toggle navigation" aria-controls="navbarSupportedContent" aria-expanded="false" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- navbar links -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <a class="nav-item nav-link active" href="#projects">Projects</a>
-        <a class="nav-item nav-link active" href="#writing">Writing</a>
-        <a class="nav-item nav-link active" href="#contact">Contact</a>
-        <a class="nav-item nav-link active" href="about.html">About</a>
+      <div class="nav-links" id="navbarSupportedContent">
+        <a class="nav-item" href="#projects">Projects</a>
+        <a class="nav-item" href="#writing">Writing</a>
+        <a class="nav-item" href="#contact">Contact</a>
       </div>
     </nav>
   </header>
   
-  <div class="container-fluid">
-    <section id="welcome-section" class="bg row text-center">
-      <div id="content" class="rounded col-11 col-md-5 mx-auto p-5">
-        <h1><strong>Hi, I'm Trevor.</strong></h1>
-        <p id="about" class="h4">
-          I'm a front end developer.
-        </p>
+  <div>
+    <section id="hero">
+      <div class="content">
+        <h1>Hi, I'm Trevor.</h1>
+        <p>I'm a front end developer.</p>
       </div>
     </section>
 
-    <section id="projects" class="bg row text-center my-5">
-      <div class="align-middle">
-        <h1 class="my-5">Projects</h1>
-        <div class="container-fluid justify-content-center mt-1">
-          <div class="row justify-content-center">
-            <div class="col-md-6 col-12 my-2">
-              <a href="https://tbruner.github.io/quiz-app" target="_blank" rel="noopener" class='tile'>
-                <img src="images/persona-quiz-app.png" class="img-fluid rounded thumbnail" alt="quiz app thumbnail">
-                <div class="description my-2">Persona Quiz App HTML CSS JavaScript</div>
-              </a>
-              <a href="https://github.com/tbruner/quiz-app" target="_blank" class="fa fa-github m-0 pb-1 source-link" rel="noopener"></a>
-              <p>
-                A quiz app based off the Persona Video game series. Features a selection of four quizzes that will present five random questions from a list.
-              </p>
-            </div>
+    <section id="projects">
+      <h1>Projects</h1>
+      <div class="content">
+        <div class="card">
+          <a href="https://tbruner.github.io/quiz-app" target="_blank" rel="noopener" class='tile'>
+            <img src="images/persona-quiz-app.png" class="thumbnail" alt="quiz app thumbnail">
+            <div class="description">Persona Quiz App HTML CSS JavaScript</div>
+          </a>
+          <a href="https://github.com/tbruner/quiz-app" target="_blank" class="github-icon" rel="noopener">github</a>
+          <p>
+            A quiz app based off the Persona Video game series. Features a selection of four quizzes that will present five random questions from a list.
+          </p>
+        </div>
 
-            <div class="col-md-6 col-12 my-2">
-              <a href="https://tbruner.github.io/simon-game" target="_blank" rel="noopener" class='tile'>
-                <img src="images/simonGame.png" class="img-fluid rounded thumbnail" alt="simon game thumbnail">
-                <div class="description my-2">Simon Game HTML CSS JavaScript</div>
-              </a>
-              <a href="https://github.com/tbruner/Simon-Game" target="_blank" class="fa fa-github m-0 pb-1 source-link" rel="noopener"></a>
-              <p>
-                This is a simple implementation of the classic Simon Game
-              </p>
-            </div>
+        <div class="card">
+          <a href="https://tbruner.github.io/simon-game" target="_blank" rel="noopener" class='tile'>
+            <img src="images/simonGame.png" class="thumbnail" alt="simon game thumbnail">
+            <div class="description">Simon Game HTML CSS JavaScript</div>
+          </a>
+          <a href="https://github.com/tbruner/Simon-Game" target="_blank" class="github-icon" rel="noopener">github</a>
+          <p>
+            This is a simple implementation of the classic Simon Game
+          </p>
+        </div>
 
-            <div class="col-md-6 col-12 my-2">
-              <a href="https://tbruner.github.io/markdown-previewer" target="_blank" rel="noopener" class='tile'>
-                <img src="images/markdown-thumbnail.png" class="img-fluid rounded thumbnail" alt="markdown-previewer thumbnail">
-                <div class="description my-2">Markdown Previewer React CSS</div>
-              </a>
-              <a href="https://github.com/tbruner/markdown-previewer" target="_blank" class="fa fa-github m-0 pb-1 source-link" rel="noopener"></a>
-              <p>
-                This app takes Markdown input and displays a preview of the output.
-              </p>
-            </div>
+        <div class="card">
+          <a href="https://tbruner.github.io/markdown-previewer" target="_blank" rel="noopener" class='tile'>
+            <img src="images/markdown-thumbnail.png" class="thumbnail" alt="markdown-previewer thumbnail">
+            <div class="description">Markdown Previewer React CSS</div>
+          </a>
+          <a href="https://github.com/tbruner/markdown-previewer" target="_blank" class="github-icon" rel="noopener">github</a>
+          <p>
+            This app takes Markdown input and displays a preview of the output.
+          </p>
+        </div>
 
-            <div class="col-md-6 col-12 my-2">
-              <a href="https://typing-game-tbruner.vercel.app" target="_blank" rel="noopener" class='tile'>
-                <img src="images/typing-game-thumbnail.png" class="img-fluid rounded thumbnail" alt="typin game thumbnail">
-                <div class="description my-2">Typing Game React CSS</div>
-              </a>
-              <a href="https://github.com/tbruner/typing-game" target="_blank" class="fa fa-github m-0 pb-1 source-link" rel="noopener"></a>
-              <p>
-                This app is a typing game that features four options for text and three for length of the game. The characters of text are highlighted green if 
-                the input is correct and red if incorrect.
-              </p>
-            </div>
-          </div>
+        <div class="card">
+          <a href="https://typing-game-tbruner.vercel.app" target="_blank" rel="noopener" class='tile'>
+            <img src="images/typing-game-thumbnail.png" class="thumbnail" alt="typin game thumbnail">
+            <div class="description">Typing Game React CSS</div>
+          </a>
+          <a href="https://github.com/tbruner/typing-game" target="_blank" class="github-icon" rel="noopener">github</a>
+          <p>
+            This app is a typing game that features four options for text and three for length of the game. The characters of text are highlighted green if 
+            the input is correct and red if incorrect.
+          </p>
         </div>
       </div>
     </section>
 
-    <div id="writing" class="bg row text-center my-5">
-      <div id='writing-content' class="align-middle rounded col-11 col-md-6 mx-auto p-5">
-        <h1 class="mb-5">Writing</h1>
-        <div class="container-fluid justify-content-center mt-1">
-          <div class="row justify-content-center">
-            <div class="col-md-6 col-12 my-2 tile" id="post-tile">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <section id="writing">
+      <h1>Writing</h1>
+      <div class="content" id="posts"></div>
+    </section>
 
-    <section id="contact" class="bg row text-center">
-      <div class="align-middle rounded col-11 col-md-6 mx-auto p-5">
-        <h1>Lets Connect!</h1>
-        <nav class="nav justify-content-center">
-          <a href="https://github.com/tbruner" target="_blank" class="nav-link fa fa-github mx-1 my-3" alt="github link" rel="noopener"></a>
-          <a href="https://twitter.com//trevorabruner/" target="_blank" class="nav-link fa fa-twitter mx-1 my-3" alt="twitter link" rel="noopener"></a>
-          <a href="mailto:trevorabruner@gmail.com" class="fa fa-envelope-o nav-link mx-1 my-3" alt="email link"></a>
-        </nav>
-      </div>
+    <section id="contact">
+      <h1>Lets Connect!</h1>
+      <nav>
+        <a href="https://github.com/tbruner" target="_blank" class="github-icon" alt="github link" rel="noopener">github</a>
+        <a href="https://twitter.com//trevorabruner/" target="_blank" class="twitter-icon" alt="twitter link" rel="noopener">twitter</a>
+        <a href="mailto:trevorabruner@gmail.com" class="email-icon" alt="email link">email</a>
+      </nav>
     </div>
   </section>
 
-  <!-- jQuery first, then code to collapse navbar on mobile, then Popper.js and Bootstrap JS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
   <script>
-    $(".navbar-collapse a").click(function () {
-      $(".navbar-collapse").collapse("hide");
-    });
-
     // Get posts from DEV.to
     async function getapi(url) {
-    const response = await fetch(url);
-    
-    // Storing data in form of JSON
-    var data = await response.json();
-    console.log(data);
-    display(data);
+      const response = await fetch(url);
+      
+      // Storing data in form of JSON
+      var data = await response.json();
+      console.log(data);
+      display(data);
     }
   
     function display(articles) {
       let tile = 
-      `<a href=${articles[0].canonical_url} target="_blank" rel="noopener">
-        <img src=${articles[0].cover_image} class="img-fluid rounded thumbnail" alt="article thumbnail">
+      `<div class="tile"><a href=${articles[0].canonical_url} target="_blank" rel="noopener">
+        <img src=${articles[0].cover_image} class="thumbnail" alt="article thumbnail">
         <div class="description my-2">${articles[0].title}</div>
-      </a>`;
-      document.getElementById('post-tile').innerHTML = tile;
+      </a></div>`;
+      document.getElementById('posts').innerHTML = tile;
     }
     
     getapi('https://dev.to/api/articles?username=tbruner');
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 </html>
