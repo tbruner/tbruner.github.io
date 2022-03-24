@@ -64,7 +64,8 @@ nav {
   gap: 24px;
 }
 
-.tile:hover {
+.tile:hover,
+.tile:focus-within {
   opacity: .64;
 }
 
@@ -139,7 +140,9 @@ h1 {
   height: 36px;
 }
 
-.icon svg:hover {
+/* adjust styling on icons on hover and on focus */
+.icon svg:hover,
+.icon:focus > svg {
   color: hsl(var(--brand-hue), 10%, 50%);
 }
 
