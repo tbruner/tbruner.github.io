@@ -28,8 +28,10 @@ a {
   text-decoration: none;
 }
 
-h1 {
-  font-size: 48px;
+h2 {
+  font-size: 36px;
+  text-align: center;
+  padding-bottom: 8vh;
 }
 
 .logo {
@@ -78,18 +80,14 @@ nav {
   background-color: hsl(var(--brand-hue) var(--brand-saturation) 15% / 60%);
 }
 
-#hero .content h1 {
+h1 {
+  font-size: 48px;
   margin: 0px;
 }
 
 #hero .content p {
   margin: 0px;
   padding-top: 12px;
-}
-
-#projects h1 {
-  text-align: center;
-  padding-bottom: 8vh;
 }
 
 #projects .content {
@@ -105,10 +103,6 @@ nav {
 
 #writing {
   background-color: hsl(var(--brand-hue), 10%, 30%);
-}
-
-#writing h1 {
-  text-align: center;
 }
 
 #writing .content {
