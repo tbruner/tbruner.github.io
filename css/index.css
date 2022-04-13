@@ -1,11 +1,24 @@
 :root {
+  color-scheme: light dark;
   --brand-hue: 290;
   --brand-saturation: 100%;
   --brand-light: 36%;
   --primary: hsl(var(--brand-hue), var(--brand-saturation), var(--brand-light));
+  --font: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root.dark {
   --background: hsl(var(--brand-hue), 10%, 15%);
   --text: hsl(var(--brand-hue), 15%, 85%);
-  --font: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --hero-light: 15%;
+  --secondary-light: 30%;
+}
+
+:root.light {
+  --background: hsl(var(--brand-hue), 10%, 90%);
+  --text: hsl(var(--brand-hue), 15%, 5%);
+  --hero-light: 100%;
+  --secondary-light: 80%;
 }
 
 html {
@@ -17,6 +30,7 @@ body {
   font-family: var(--font);
   color: var(--text);
   background-color: var(--background);
+  margin: 0;
 }
 
 section {
@@ -41,20 +55,20 @@ h2 {
 nav {
   display: flex;
   align-items: center;
-  padding: 1vh 16vw;
+  padding: 8px 16vw;
 }
 
-.navbar-dark {
+.navbar {
   background-color: var(--background);
 }
 
-.navbar-dark a {
+.navbar a {
   font-family: var(--font);
   color: var(--text);
 }
 
-.navbar-dark a:focus,
-.navbar-dark a:hover {
+.navbar a:focus,
+.navbar a:hover {
   color: hsl(var(--brand-hue), 10%, 50%);
 }
 
@@ -62,6 +76,23 @@ nav {
   margin-left: auto;
   display: flex;
   gap: 24px;
+}
+
+.nav-links button {
+  background-color: transparent;
+  border: none;
+}
+
+.nav-links button:hover {
+  background-color: transparent;
+}
+
+.nav-links .material-icons {
+  color: var(--text);
+}
+
+.nav-links .material-icons:hover {
+  color: hsl(var(--brand-hue), 10%, 50%);
 }
 
 .tile:hover,
@@ -80,7 +111,7 @@ nav {
 #hero .content {
   padding: 36px 64px;
   border-radius: 12px;
-  background-color: hsl(var(--brand-hue) var(--brand-saturation) 15% / 60%);
+  background-color: hsl(var(--brand-hue) var(--brand-saturation) var(--hero-light) / 60%);
 }
 
 h1 {
@@ -105,7 +136,7 @@ h1 {
 }
 
 #writing {
-  background-color: hsl(var(--brand-hue), 10%, 30%);
+  background-color: hsl(var(--brand-hue), 10%, var(--secondary-light));
 }
 
 #writing .content {
@@ -119,7 +150,6 @@ h1 {
   padding-top: 24vh;
   padding-bottom: 24vh;
 }
-
 
 #contact h2 {
   padding-bottom: 0;
@@ -156,7 +186,7 @@ h1 {
   }
 
   nav {
-    padding: 1vh 4vw;
+    padding: 8px 8px;
   }
 
   #projects .content {
