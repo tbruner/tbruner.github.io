@@ -91,6 +91,7 @@ nav {
 }
 
 .nav-links .material-icons:hover {
+  cursor: pointer;
   color: hsl(var(--brand-hue), 10%, 50%);
 }
 
