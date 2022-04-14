@@ -11,6 +11,7 @@
   --text: hsl(var(--brand-hue), 15%, 85%);
   --hero-light: 15%;
   --secondary-light: 30%;
+  --logo-color: var(--text);
 }
 
 :root.light {
@@ -18,6 +19,7 @@
   --text: hsl(var(--brand-hue), 15%, 5%);
   --hero-light: 100%;
   --secondary-light: 80%;
+  --logo-color: var(--primary);
 }
 
 html {
@@ -47,8 +49,8 @@ h2 {
   padding-bottom: 8vh;
 }
 
-.logo {
-  height: 40px;
+.icon .logo {
+  color: var(--logo-color);
 }
 
 nav {
