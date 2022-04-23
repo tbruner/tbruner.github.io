@@ -132,6 +132,15 @@ h1 {
   gap: 24px;
 }
 
+.project-caption {
+  display: flex;
+  width: 100%;
+}
+
+.project-caption > .icon {
+  margin-left: auto;
+}
+
 .thumbnail {
   max-width: 100%;
   height: auto;
