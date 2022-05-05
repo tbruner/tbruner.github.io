@@ -181,7 +181,6 @@ h1 {
   height: 36px;
 }
 
-/* adjust styling on icons on hover and on focus */
 .icon svg:hover,
 .icon:focus > svg {
   color: hsl(var(--brand-hue), 10%, 50%);
@@ -195,6 +194,19 @@ footer {
   width: 100%;
   text-align: center;
   padding: 20px 0;
+}
+
+.card {
+  padding: 16px;
+  border-radius: 12px;
+}
+
+#projects .card {
+  background-color: hsl(var(--brand-hue), 10%, var(--secondary-light));
+}
+
+#writing .card {
+  background-color: var(--background);
 }
 
 @media screen and (max-width: 1320px) {

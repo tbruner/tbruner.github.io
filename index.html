@@ -229,14 +229,13 @@
     async function getapi(url) {
       const response = await fetch(url);
       
-      // Storing data in form of JSON
       var data = await response.json();
       display(data);
     }
   
     function display(articles) {
       let tile = 
-      `<div class="tile"><a href=${articles[0].canonical_url} target="_blank" rel="noopener">
+      `<div class="card"><a class="tile" href=${articles[0].canonical_url} target="_blank" rel="noopener">
         <img src=${articles[0].cover_image} class="thumbnail" alt="article thumbnail">
         <div class="description my-2">${articles[0].title}</div>
       </a></div>`;
