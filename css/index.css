@@ -141,6 +141,13 @@ h1 {
   margin-left: auto;
 }
 
+.tools span {
+  background-color: var(--text);
+  color: hsl(var(--brand-hue), 10%, var(--secondary-light));
+  width: fit-content;
+  padding: 2px 5px;
+}
+
 .thumbnail {
   max-width: 100%;
   height: auto;
