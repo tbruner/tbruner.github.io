@@ -181,6 +181,8 @@ h1 {
 .description {
   color: var(--text);
   font-weight: bold;
+  font-size: 1.1rem;
+
 }
 
 .icon svg {
@@ -204,6 +206,9 @@ footer {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   padding: 16px;
   border-radius: 12px;
 }
