@@ -3,7 +3,8 @@
   --brand-saturation: 100%;
   --brand-light: 36%;
   --primary: hsl(var(--brand-hue), var(--brand-saturation), var(--brand-light));
-  --font: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 :root.dark {
@@ -99,13 +100,19 @@ nav {
 
 .tile:hover,
 .tile:focus-within {
-  opacity: .64;
+  opacity: 0.64;
 }
 
 #hero {
-  background: linear-gradient(-45deg, var(--primary), hsl(320, 100%, 36%), #23a6d5, #23d5ab);
+  background: linear-gradient(
+    -45deg,
+    var(--primary),
+    hsl(320, 100%, 36%),
+    #23a6d5,
+    #23d5ab
+  );
   background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite;
   padding-top: 24vh;
   padding-bottom: 24vh;
 }
@@ -113,7 +120,9 @@ nav {
 #hero .content {
   padding: 36px 64px;
   border-radius: 12px;
-  background-color: hsl(var(--brand-hue) var(--brand-saturation) var(--hero-light) / 60%);
+  background-color: hsl(
+    var(--brand-hue) var(--brand-saturation) var(--hero-light) / 60%
+  );
 }
 
 h1 {
@@ -182,7 +191,6 @@ h1 {
   color: var(--text);
   font-weight: bold;
   font-size: 1.1rem;
-
 }
 
 .icon svg {
@@ -244,13 +252,13 @@ footer {
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
